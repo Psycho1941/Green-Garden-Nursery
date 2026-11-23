@@ -1,0 +1,624 @@
+/* GREEN GARDEN NURSERY - shared styles */
+
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #26352a;
+    background: #fbfcf8;
+    line-height: 1.6;
+}
+
+/* Anchor styling */
+a {
+    color: inherit;
+}
+
+/* Website header */
+.site-header {
+    min-height: 76px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #174d35;
+    color: white;
+}
+
+/* Website logo */
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+/* Navigation links */
+nav a {
+    color: #edf5ed;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Navigation hover and active effects */
+nav a:hover,
+nav a.active {
+    color: #c4e6a8;
+}
+
+/* Hero section */
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(9,42,25,.82), rgba(9,42,25,.22)),
+        url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600") center/cover;
+}
+
+/* Hero content */
+.hero-content {
+    max-width: 610px;
+}
+
+/* Small heading */
+.eyebrow {
+    color: #6e9b58;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Hero and banner small headings */
+.hero .eyebrow,
+.page-banner .eyebrow {
+    color: #d4edb9;
+}
+
+/* Main hero heading */
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+/* Hero paragraph */
+.hero-content > p:not(.eyebrow) {
+    font-size: 17px;
+    margin-bottom: 28px;
+    max-width: 470px;
+}
+
+/* Button link */
+.button-link {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 4px 8px 4px 0;
+    border-radius: 4px;
+    background: #7da65c;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Button hover effect */
+.button-link:hover {
+    background: #527d3e;
+}
+
+/* Light button */
+.button-light {
+    background: white;
+    color: #285238;
+}
+
+/* Common section styling */
+.section {
+    padding: 70px 7%;
+}
+
+/* Introduction section */
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+/* All h2 headings */
+h2 {
+    font-family: Georgia, serif;
+    color: #214c35;
+    font-size: clamp(28px, 4vw, 39px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+/* Last paragraph inside introduction */
+.intro > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #667267;
+}
+
+/* Category and featured sections */
+.category-section,
+.featured-section {
+    background: #f1f5ec;
+}
+
+/* Section and catalogue headings */
+.section-heading,
+.catalogue-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* Category grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Category cards */
+.category-card {
+    min-height: 260px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Plants category background */
+.plants-category {
+    background-image:
+        linear-gradient(0deg, rgba(13,49,28,.88), rgba(13,49,28,.08)),
+        url("https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1000");
+}
+
+/* Flowers category background */
+.flowers-category {
+    background-image:
+        linear-gradient(0deg, rgba(72,35,38,.82), rgba(72,35,38,.08)),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1000");
+}
+
+/* Category small text */
+.category-card span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Category heading */
+.category-card h3 {
+    font: 34px Georgia, serif;
+    margin: 7px 0;
+}
+
+/* Category paragraph */
+.category-card p {
+    max-width: 350px;
+    margin-bottom: 14px;
+}
+
+/* Category bold text */
+.category-card b {
+    font-size: 14px;
+    color: #d7efbd;
+}
+
+/* Featured products section */
+.featured-section {
+    text-align: center;
+    background: #fbfcf8;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Individual product card */
+.product-card {
+    background: white;
+    border: 1px solid #e8ede4;
+    border-radius: 9px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(30,65,40,.06);
+    transition: transform .2s, box-shadow .2s;
+}
+
+/* Product card hover effect */
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(30,65,40,.12);
+}
+
+/* Product images */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    background: #e7eee3;
+}
+
+/* Product information */
+.product-info {
+    padding: 16px;
+}
+
+/* Product category tag */
+.product-info .tag {
+    color: #73915f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Product name */
+.product-info h3 {
+    color: #254e36;
+    font: 22px Georgia, serif;
+    margin: 5px 0 12px;
+}
+
+/* Product details button */
+.details-button {
+    border: 0;
+    border-radius: 4px;
+    padding: 9px 13px;
+    background: #285c3d;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+.buy-now-btn{
+      border: 0;
+    border-radius: 4px;
+    padding: 9px 13px;
+    margin-top: 5px;
+    background: #285c3d;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+
+}
+.add-cart-btn{
+      border: 0;
+    border-radius: 4px;
+    padding: 9px 13px;
+    background: #285c3d;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+
+}
+/* Details button hover */
+.details-button:hover {
+    background: #173f2b;
+}
+
+/* Inner page banner */
+.page-banner {
+    min-height: 255px;
+    padding: 55px 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Inner page main heading */
+.page-banner h1 {
+    font: clamp(42px, 6vw, 60px) Georgia, serif;
+    margin: 0 0 8px;
+}
+
+/* Inner page paragraph */
+.page-banner p:last-child {
+    max-width: 600px;
+}
+
+/* Plants page banner */
+.plants-banner {
+    background-image:
+        linear-gradient(rgba(17,62,37,.78), rgba(17,62,37,.78)),
+        url("https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=1500");
+}
+
+/* Flowers page banner */
+.flowers-banner {
+    background-image:
+        linear-gradient(rgba(78,42,46,.72), rgba(78,42,46,.72)),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1500");
+}
+
+/* Catalogue section */
+.catalogue-section {
+    min-height: 400px;
+}
+
+/* Product count label */
+.count-label {
+    color: #71816f;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* Contact section */
+.contact-band {
+    padding: 45px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #eaf1e4;
+}
+
+/* Contact heading */
+.contact-band h2 {
+    margin-bottom: 7px;
+}
+
+/* Contact paragraph */
+.contact-band p:not(.eyebrow) {
+    color: #68766a;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #eaf2e8;
+    background: #174d35;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* Plant / flower information overlay */
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    padding: 24px;
+    background: rgba(9,24,15,.72);
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Open modal */
+.modal.open {
+    display: flex;
+}
+
+/* Modal content panel */
+.modal-panel {
+    position: relative;
+    width: min(900px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: minmax(240px,.85fr) 1.15fr;
+}
+
+/* Modal image */
+.modal-image {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    background: #e7eee3;
+}
+
+/* Modal text content */
+.modal-content {
+    padding: 32px;
+}
+
+/* Modal heading */
+.modal-content h2 {
+    margin-bottom: 8px;
+}
+
+/* Modal paragraph */
+.modal-content > p {
+    color: #647267;
+    margin-bottom: 18px;
+}
+
+/* Close modal button */
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #1d4931;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px #0002;
+}
+
+/* Plant care information grid */
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Individual care information */
+.care-item {
+    padding: 12px;
+    border-radius: 7px;
+    background: #f1f5ed;
+}
+
+/* Care item heading */
+.care-item strong {
+    display: block;
+    color: #315b3c;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+/* Care item description */
+.care-item span {
+    color: #536255;
+    font-size: 13px;
+}
+
+/* Additional care note */
+.care-note {
+    margin-top: 14px;
+    padding: 14px;
+    border-left: 3px solid #7da65c;
+    background: #f7f8f3;
+    color: #536255;
+    font-size: 13px;
+}
+
+
+/* Responsive design for tablets */
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* Responsive design for mobile phones */
+@media (max-width: 650px) {
+
+    .site-header {
+        flex-direction: column;
+        padding: 16px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 55px 7%;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 48px 5%;
+    }
+
+    .contact-band {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-panel {
+        display: block;
+    }
+
+    .modal-image {
+        height: 230px;
+        min-height: 0;
+    }
+
+    .modal-content {
+        padding: 22px;
+    }
+
+}
+
+
+/* Responsive design for very small mobile screens */
+@media (max-width: 380px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
